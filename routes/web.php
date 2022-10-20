@@ -28,3 +28,7 @@ Route::get('hasil', function () {
 Route::get('contact', function () {
     return view('contact');
 });
+
+Route::get('krs', function () {
+    return view('krs');
+});

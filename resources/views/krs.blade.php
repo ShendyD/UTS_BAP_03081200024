@@ -50,7 +50,7 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/krs">LIHAT KRS</a>
                   </li>
-                  
+         
                   <!-- Navbar dropdown -->
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ABOUT ME</a>
@@ -67,181 +67,101 @@
                 </ul>
             </div>
         </nav>
-        
-        <section id="hero">
-            <div class="hero-container">
-              <h1>Shendy Dennison</h1>
-              <h2>I'm a Professional Digital Marketer In Medan City</h2>
-              <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
-            </div>
-        </section><!-- End Hero -->
 
-         <!-- ======= My Resume Section ======= -->
-         <section id="resume" class="resume">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6">
-                  <h3 class="resume-title">Ringkasan</h3>
-                  <div class="resume-item pb-0">
-                    <h4>Shendy Dennison</h4>
-                    <p><em>Pribadi yang inovatif dengan pengalaman lebih dari 2 tahun merancang dan mengembangkan materi pemasaran digital yang berpusat pada pengguna dari konsep awal hingga hasil akhir.</em></p>
-                    <p>
-                    <ul>
-                      <li>Cemara No. 88V</li>
-                      <li>+62 853-5897-1128</li>
-                      <li>03081200024@student.uph.edu</li>
-                    </ul>
-                    </p>
-                  </div>
-      
-                  <h3 class="resume-title">Pendidikan</h3>
-                  <div class="resume-item">
-                    <h4>Sarjana Komputer</h4>
-                    <h5>2020 - 2024</h5>
-                    <p><em>Universitas Pelita Harapan Kampus Medan</em></p>
-                    <p>Jurusan Sistem Informasi</p>
-                  </div>
-                  <div class="resume-item">
-                    <h4>Sekolah Menengah Atas</h4>
-                    <h5>2017 - 2020</h5>
-                    <p><em>Yayasan Perguruan Sutomo 1</em></p>
-                    <p>Peminatan IPA</p>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <h3 class="resume-title">Pengalaman Profesional</h3>
-                  <div class="resume-item">
-                    <h4>Majelis Perwakilan Mahasiswa</h4>
-                    <h5>2022 - Present</h5>
-                    <p><em>Universitas Pelita Harapan Kampus Medan</em></p>
-                    <p>
-                    <ul>
-                      <li>Secara langsung aktif sebagai anggota di komisi survei dan data. </li>
-                      <li>Bertanggung jawab terhadap kerahasiaan data mahasiswa yang mengisi survei dan aspirasi.</li>
-                      <li>Sebagai fungsi pengawas terhadap setiap acara yang dilangsungkan oleh Organisasi Kemahasiswaan (OK).</li>
-                    </ul>
-                    </p>
-                  </div>
-                  <div class="resume-item">
-                    <h4>Kepala Departemen Badan Eksekutif Mahasiswa</h4>
-                    <h5>2021 - 2022</h5>
-                    <p><em>Universitas Pelita Harapan Kampus Medan</em></p>
-                    <p>
-                    <ul>
-                      <li>Secara langsung aktif sebagai ketua departemen pengembangan wawasan dan penalaran.</li>
-                      <li>Mengembangkan wawasan mahasiswa/i dengan membahas isu-isu aktual yang relevan dan berguna.</li>
-                      <li>Sebagai lembaha eksekutif berskala universitas untuk meningkatkan kualitas hidup mahasiswa/i.</li>
-                    </ul>
-                    </p>
-                  </div>
-                </div>
-              </div>
-      
-            </div>
-        </section><!-- End My Resume Section -->
-
-         <!-- ======= My Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
+        <section id="krs" class="krs">
           <div class="container">
-            <h2 style="text-align: center;    font-size: 26px;
-            font-weight: 700;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            color: #3b434a;">PORTFOLIO SAYA</h2>
-            <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-img"><img src="/../portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
-                </div>
-    
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-img"><img src="/../portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
-                </div>
-    
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-img"><img src="/../portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
-                </div>
-    
+              <br>
+              <br>
+              <table width="40%">
+                  <tr>
+                  <td>Nama</td>
+                  <?php $nama = DB::table('Mahasiswa')
+                      ->where('ID', '1')
+                      ->value('Nama');
+
+                      echo "<td>".$nama."</td>"; ?>
+                  </tr>
+
+                <tr>
+                <td>Student ID</td>
+                <?php
+                  $studentID = DB::table('Mahasiswa')
+                  ->where('ID', '1')
+                  ->value('StudentID');
+
+                  echo "<td>".$studentID."</td>";
+                ?>
+                </tr>
+
+                <tr>
+                <td>Term</td>
+                <?php
+                  $term = DB::table('term')
+                  ->where('id_term', '1')
+                  ->value('kode_term');
+
+                  echo "<td>".$term."</td>";
+                ?>
+                </tr>
+
+                <tr>
+                <td>Total SKS</td>    
+                <?php
+                    $total=0;
+                    $id=1;
+                    while($id<7){                    
+                        $temp = $total + DB::table('Matakuliah')->where('id_matkul',$id)->value('sks');
+                        $total = $temp;
+                        $id++;
+                    }
+                    echo "<td>".$total."</td>";
+                ?>
+                </tr>                
+          </div>
+          </table>
+          <br>
+          <br>
+            <div class="container">
+
+                <table width="700px" style="background-color:#d9d9d9">
+                    <a>Mata kuliah yang diambil</a>
+                    <tr>
+                        <th>No.</th>
+                        <th>Kode Mata Kuliah</th>
+                        <th>Nama Mata Kuliah</th>
+                        <th style='text-align:center'>SKS</th>
+                    </tr>
+                    <?php
+                        $no=1;
+                        while ($no<7) {
+                            
+                            $kodematakuliah = DB::table('Matakuliah')
+                            ->where('id_matkul', $no)
+                            ->value('kode_matakuliah');
+
+                            $namamatakuliah = DB::table('Matakuliah')
+                            ->where('id_matkul', $no)
+                            ->value('nama_matakuliah');
+
+                            $sks = DB::table('Matakuliah')
+                            ->where('id_matkul', $no)
+                            ->value('sks');
+
+                            echo "<tr>";
+                            echo "<td>".$no."</td>";                        
+                            echo "<td>".$kodematakuliah."</td>";
+                            echo "<td>".$namamatakuliah."</td>";
+                            echo "<td style='text-align:center'>".$sks."</td>";
+                            echo "</tr>";
+                            
+                            $no++;
+                        }
+                    ?>
+                </table>
+                <br>
+                <br>
             </div>
-          </div>
-        </section><!-- End My Portfolio Section -->
-
-        <!-- ======= Contact Me Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2 style="text-align: center;    font-size: 26px;
-          font-weight: 700;
-          margin-top: 50px;
-          margin-bottom: 20px;
-          color: #3b434a;">TERHUBUNG DENGAN SAYA</h2>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="info-box">
-                  <i class="bx bx-share-alt"></i>
-                  <h3>Social Profiles</h3>
-                  <div class="social-links">
-                    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <i class="bx bx-envelope"></i>
-                  <h3>Email Me</h3>
-                  <p>03081200024@student.uph.edu</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <i class="bx bx-phone-call"></i>
-                  <h3>Call Me</h3>
-                  <p>+62 853-5897-1128</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Me Section -->
+        </section><!-- End KRS Section -->
 
       <footer id="footer">
         <div class="container">

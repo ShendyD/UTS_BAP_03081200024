@@ -46,6 +46,9 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/">HOME</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/krs">LIHAT KRS</a>
+                  </li>
          
                   <!-- Navbar dropdown -->
                   <li class="nav-item dropdown">
