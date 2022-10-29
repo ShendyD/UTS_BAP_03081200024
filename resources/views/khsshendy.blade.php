@@ -153,13 +153,14 @@
 
                             $nilaiHuruf = DB::table('khs_detail')
                             ->where('kode_khs', 1)
-                            ->value('NilaiHuruf');
+                            ->value('nilaiHuruf');
 
                             echo "<tr>";
                             echo "<td>".$no."</td>";                        
                             echo "<td>".$kodematakuliah."</td>";
                             echo "<td>".$namamatakuliah."</td>";
                             echo "<td style='text-align:center'>".$sks."</td>";
+                            echo "<td style='text-align:center'>".$nilaiHuruf."</td>";
                             echo "</tr>";
                             
                             $no++;
