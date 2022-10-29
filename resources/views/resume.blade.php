@@ -18,54 +18,58 @@
     <link href="/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    
   </head>
-    <body class="antialiased">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <!-- Container wrapper -->
-            <div class="container-fluid">
-              <!-- Toggle button -->
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-mdb-toggle="collapse"
-                data-mdb-target="#navbarCenteredExample"
-                aria-controls="navbarCenteredExample"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <i class="fas fa-bars"></i>
-              </button>
-          
-              <!-- Collapsible wrapper -->
-              <div
-                class="collapse navbar-collapse justify-content-center"
-                id="navbarCenteredExample"
-              >
-                <!-- Left links -->
-                <ul class="navbar-nav mb-2 mb-lg-0">
+  <body class="antialiased">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <!-- Container wrapper -->
+          <div class="container-fluid">
+            <!-- Toggle button -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-mdb-toggle="collapse"
+              data-mdb-target="#navbarCenteredExample"
+              aria-controls="navbarCenteredExample"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+        
+            <!-- Collapsible wrapper -->
+            <div
+              class="collapse navbar-collapse justify-content-center"
+              id="navbarCenteredExample"
+            >
+              <!-- Left links -->
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/krs">LIHAT KRS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/admin">ADMIN</a>
+                </li>
+       
+                <!-- Navbar dropdown -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ABOUT ME</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/resume">RESUME</a></li>
+                    <li><a class="dropdown-item" href="/hasil">PORTFOLIO</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/contact">CONNECT WITH ME</a></li>
+                  </ul>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">HOME</a>
+                      <a class="nav-link active" href="/contact">CONTACT</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/krs">LIHAT KRS</a>
-                  </li>
-         
-                  <!-- Navbar dropdown -->
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ABOUT ME</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="/resume">RESUME</a></li>
-                      <li><a class="dropdown-item" href="/hasil">PORTFOLIO</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="/contact">CONNECT WITH ME</a></li>
-                    </ul>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/contact">CONTACT</a>
-                    </li>
-                  </li>
-                </ul>
-            </div>
-        </nav>
+                </li>
+              </ul>
+          </div>
+      </nav>
 
         <!-- ======= My Resume Section ======= -->
         <section id="resume" class="resume">

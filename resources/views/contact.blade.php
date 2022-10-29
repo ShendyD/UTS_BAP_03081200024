@@ -50,6 +50,12 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/krs">LIHAT KRS</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/admin">ADMIN</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/admin2">ADMIN2</a>
+                  </li>
          
                   <!-- Navbar dropdown -->
                   <li class="nav-item dropdown">
